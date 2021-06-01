@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeadRole.master.cs" Inherits="WebTung.HeadRole" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.blockUI.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        .loginbtn {
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <header>
+            <div class="container">
+                <div class="d-flex justify-content-between">
+                    <div class="logo-wrapper">
+                        <a href="index.aspx">
+                            <img src="image/logo.bmp" alt="login-logo" />
+                        </a>
+                    </div>
+                    <nav class="nav-container row">
+                        <ul class="nav-wrapper d-flex justify-content-end">
+                            <li class="nav-list" runat="server" id="ManageCal">
+                                <a href="manager.aspx">
+                                    <asp:Label Text="Manage" runat="server" />
+                                </a>
+                            </li>
+                            <li class="nav-list" runat="server" id="LogoutCal">
+                                <a href="#" runat="server" onserverclick="Logout_ServerClick">
+                                    <asp:Label Text="Log Out" runat="server" />
+                                </a>
+                            </li>
+                            <li class="nav-list" runat="server" id="LoginCal">
+                                <a runat="server" onserverclick="LoginCal_ServerClick" href="#">
+                                    <asp:Label Text="Sign in" runat="server" />
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
